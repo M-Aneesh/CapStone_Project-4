@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css" >
+    <title>CapStone Project</title>
+</head>
+<body>
+    <div class="container">
+    <form method="get" id="myform">
+        <h1>Amazing Endemic Species Explorer</h1>
+        <button class="home"  formaction="/home">Go Back</button>
+        <button class="random" formaction = "/random">Random</button>
+        <button class="species" formaction="/species">Species</button>
+        <button class="species" formaction="/speciescount">Species Count</button>
+        <button class="country" formaction="/country">Country</button>
+        <button class="country" formaction="/countrycount">Country Count</button>
+       
+    </form>
+    </div>
+    <% if( view === "random" ) { %>
+        <div class="card">
+            <h3> Scientific Name: <%= content.scientific_name %></h3>
+            <p> Conservation Status:  <%= content.conservation_status %></p>
+            <p>Group: <%= content.group %></p>
+            <p>ISO Code: <%= content.iso_code %></p>
+            <p>Common Name: <%= content.common_name %></p>
+        </div>
+    <% } else if (view === "species"){ %>
+       <% content.forEach(function(species){ %> 
+        <div class="card1">
+            <h3> Scientific Name: <%= species.scientific_name %> </h3>
+            <p> Conservation Status:  <%= species.conservation_status %></p>
+            <p>Group: <%= species.group %></p>
+            <p>ISO Code: <%= species.iso_code %></p>
+            <p>Common Name: <%= species.common_name %></p>
+        <% })%>
+        </div>
+        <div class="card-container">
+    <% } else if( view === "speciesCount") {%>
+        <div class="card2">
+        <h1>Total count of species: <%= content.count %> species.</h1>
+        </div>
+    <% } else if (view=== "country") { %> 
+        <div class="card3">
+            <p>Country Codes: <%= content %></p>
+        </div>
+    <% } else if (view === "countryCount"){ %>
+        <div class="card4">
+            <h1>Total number of countries from where endemic species data has been collected: <%= content.count %> countries.</h1>
+        </div>
+    <% } else {%>
+        <div class="content">
+            <h1><%= content %></h1>
+        </div>
+    <% } %>
+    </div>
+</body>
+</html>
