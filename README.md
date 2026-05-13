@@ -1,44 +1,87 @@
-# CapStone_Project-4
+# Amazing Endemic Species Explorer
 
-## How to Run the Project
+Amazing Endemic Species Explorer is a web application built using Node.js, Express.js, EJS, HTML, CSS, and JavaScript that allows users to explore endemic species from different regions around the world. The project focuses on presenting species information, images, and related details through an interactive and visually appealing interface.
 
-1. Clone the repository  
-git clone https://github.com/M-Aneesh/CapStone_Project-4.git
+The application includes server-side rendering using EJS, responsive webpage design, and dynamic content handling to improve user experience while learning about endemic species.
 
-2. Move into the project folder  
-cd CapStone_Project-4
+## Features
+- Explore endemic species from different regions
+- Display species names, descriptions, and images
+- Responsive user interface using HTML and CSS
+- Dynamic rendering using EJS templates
+- Interactive and user-friendly layout
 
-3. Install dependencies  
-npm install
-
-4. Start the server  
-node index.js
-
-5. Open the application in browser  
-http://localhost:3000
-
-##Tech Stack 
+## Tech Stack
+- HTML5
+- CSS3
+- JavaScript
 - Node.js
 - Express.js
-- EJS (Embedded JavaScript Templates)
-- Axios (API requests)
-- CSS (frontend styling)
+- EJS
 
-##API used
-https://aes.shenlu.me/api/
+## Installation
 
-Endpoints:
-/v1/random
-/v1/species
-/v1/speciescount
-/v1/country
-/v1/countrycount
+Clone the repository:
 
-##Project Structure
+```bash
+git clone https://github.com/M-Aneesh/CapStone_Project-4.git
+```
+
+Navigate to the project folder:
+
+```bash
+cd CapStone_Project-4
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the server:
+
+```bash
+node index.js
+```
+
+Open the application in your browser:
+
+```txt
+http://localhost:3000
+```
+
+## Project Structure
+
+```txt
 CapStone_Project-4/
 │
-├── public/main.css          # CSS files
-├── views/index.ejs           # EJS templates
-├── index.js           # Main server file
-├── package.json     # Dependencies
+├── node_modules/
+├── public/
+│   └── main.css
+│
+├── views/
+│   └── index.ejs
+│
+├── .gitignore
+├── index.js
+├── package.json
+├── package-lock.json
 └── README.md
+```
+
+## Learning Outcomes
+- Improved backend development skills using Node.js and Express.js
+- Practiced server-side rendering using EJS
+- Enhanced responsive web design and UI structuring skills
+- Learned routing and dynamic content rendering concepts
+
+## Future Improvements
+- Add search and filter functionality
+- Include detailed species information pages
+- Integrate external wildlife APIs
+- Add dark mode support
+- Improve animations and UI interactions
+
+## Author
+Developed by Aneesh M.
